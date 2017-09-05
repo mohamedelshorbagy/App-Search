@@ -1,0 +1,85 @@
+<!--
+  Generated template for the Data page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Visitor Data</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div *ngIf="result">
+    <div class="alert-success">
+      <p>User Found</p>
+    </div>
+    <!-- 84327796 -->
+    <!-- 78323239 -->
+    <!-- 67377292 -->
+    <!-- 32134169 -->
+    <!-- 25658987 -->
+    <!-- 21564578 -->
+    <ul class="list-group">
+      <li class="list-group-item">Name : <strong>{{result.name}}</strong></li>
+      <li class="list-group-item">Email : <strong>{{result.email}}</strong></li>
+      <li class="list-group-item">Phone : <strong>{{result.phone}}</strong></li>
+      <li class="list-group-item">Unique Number : <strong>{{result.random}}</strong></li>
+      <li class="list-group-item">Education : <strong>{{result.education}}</strong></li>
+      <li class="list-group-item">Status : <strong>{{result.status}}</strong></li>  
+      <li class="list-group-item">Workshops : <strong>{{result.workshops}}</strong></li>
+        <li *ngIf="result.voc != 0" class="list-group-item">
+            voc : <strong> {{result.voc}} </strong>
+
+          </li>
+          <li *ngIf="result.organization != ''" class="list-group-item">
+            Organization : <strong>{{result.organization}}</strong>
+
+          </li>
+    </ul>
+
+        <div *ngIf="result.checked == 0">
+
+        <div *ngIf="respond == true" class="alert-success">
+          <p>{{message}}</p>
+        </div>
+        <div *ngIf="respond == false" class="alert-danger">
+            <p>{{message}}</p>
+          </div>
+
+
+          <button ion-button round color="success" (click)="checkInFunc()" class="check-btn">Check In</button>
+
+        </div>
+        <div *ngIf="result.checked != 0">
+          <div *ngIf="respond == true" class="alert-success">
+          <p>{{message}}</p>
+        </div>
+        <div *ngIf="respond == false" class="alert-danger">
+            <p>{{message}}</p>
+          </div>
+
+
+          <button ion-button round color="danger" (click)="unCheckFunc()" class="check-btn">Check Out</button>
+
+        
+
+        </div>
+
+        
+
+
+
+  </div>
+  <div *ngIf="!result" class="alert-danger">
+    <p>User Not Found</p>
+
+  </div>
+
+
+</ion-content>

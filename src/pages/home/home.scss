@@ -1,0 +1,36 @@
+page-home {
+
+    .form-unique {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        input {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 7px;   
+            transition: 0.2s;
+            font-size: 16px;
+        }
+        input:focus {
+            border-bottom: 1px solid #488aff;
+
+        }
+    
+        button {
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+
+
+        }
+    }
+
+    .btn-scan {
+        margin-left: calc((100% - 128.88px) / 2);
+
+    }
+
+    
+
+}

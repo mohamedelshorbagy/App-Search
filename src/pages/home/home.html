@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      EED Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="primary" (click)="scanQrCode()" class="btn-scan">Scan QR Code</button>
+  <div class="form-unique">
+    <ion-input type="text" [(ngModel)]="unique" placeholder="Enter a Random Number" required></ion-input>
+    <button ion-button round color="primary" (click)="printData()">Search</button>
+  </div>
+
+
+</ion-content>
